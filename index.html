@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="nav-left">
+                <img src="./Images/images.jpeg" width="70px" height="70px" alt="logo-ecommers" />
+                <ul class="list-nav-left">
+                    <li>Home</li>
+                    <li class="nav-item-left item-categories">
+                        <a class="btn-dropdown" href="#">Categories</a>
+                        <ul class="dropdown-content">
+                            <li> <a href="woman.html">Woman</a> </li>
+                            <li> <a href="mens.html">Men</a> </li>
+                            <li> <a href="snikers.html">Snikers</a> </li>
+                        </ul>
+                    </li>   
+                    <li>About us</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="nav-rigth">
+                <ul class="list-nav-rigth">
+                    <li class="list-item list-item-mode">
+                        <label class="switch">
+                            <input type="checkbox" id="data-theme-toggle" >
+                            <span class="slider round"></span>
+                    </label>
+                    <img class='img-mode' id="img-id-mode" width="40px"/>
+                    </li>
+                    
+                    <li>User</li>
+                    <li>
+                        <img src="./Images/shopping_cart.png" width="30px" alt="shopping cart logo">
+                    </li>
+                    <li>Login</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="search-products">
+        <div class="container-bar-search-products">
+            <input class="input-search" type="text" id="inputId">
+            <button class="button-search">
+                <img class="image-search" src="./Images/search.png" width="40" height="40" alt="img-search"/>
+            </button>
+        </div>
+
+    </section>
+    <script src="./Data/products.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
