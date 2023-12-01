@@ -70,10 +70,22 @@ const addUser = (user) => {
             password: user.password
         }];
         saveInLocalStorage('dataUsers', dataUsers);
+        toastMixin.fire({
+            title: `You have successfully registered.`,
+            icon:'success',
+            position:'center'
+
+        });
 
     }else if(positionThisUser < 0){
         dataUsers.push(user);
         saveInLocalStorage('dataUsers', dataUsers);
+        toastMixin.fire({
+            title: `You have successfully registered.`,
+            icon:'success',
+            position:'center'
+
+        });
 
     }else {
         toastMixin.fire({

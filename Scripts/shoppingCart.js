@@ -3,14 +3,6 @@ let listCartHTML = document.querySelector('.listCart');
 let cartProductContainer = document.querySelector(".cart-products")
 let buttonClose = document.querySelector(".buttonClose")
 
-let toastMixin = Swal.mixin({
-    toast: true,
-    animation: false,
-    showConfirmButton: false,
-    timer: 1000
-  });
-
-
 
 const addToShoppingCart = (product) => {
     
