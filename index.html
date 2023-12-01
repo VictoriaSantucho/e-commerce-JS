@@ -6,26 +6,24 @@
     <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
 </head>
-<body>
-    <header>
+<body class="">
+    <header class="myHeader">
         <nav class="nav-container">
             <div class="nav-left">
                 <img src="./Images/images.jpeg" width="70px" height="70px" alt="logo-ecommers" />
-                <ul class="list-nav-left">
-                    <li>Home</li>
-                    <li class="nav-item-left item-categories">
-                        <a class="btn-dropdown" href="#">Categories</a>
+                <ul class="nav-left-list">
+                    <li><a class='a-navBar' id="item-home" href="#">Home</a></li>
+                    <li class="item-categories">
+                        <a id='btn-dropdown' class="a-navBar" href="#">Categories</a>
                         <ul class="dropdown-content">
-                            <a id='item-woman' href="#">Woman</a>
-                            <a id='item-mens' href="#">Men</a> 
+                            <li><a class='a-navBar'id='item-woman' href="#">Woman</a></li>
+                            <li><a class='a-navBar'  id='item-mens' href="#">Men</a> </li>
                         </ul>
-                    </li>   
-                    <li>About us</li>
-                    <li>Contact</li>
+                    </li> 
                 </ul>
             </div>
             <div class="nav-rigth">
-                <ul class="list-nav-rigth">
+                <ul class="nav-right-list">
                     <li class="list-item list-item-mode">
                         <label class="switch">
                             <input type="checkbox" id="data-theme-toggle" >
@@ -34,35 +32,82 @@
                     <img class='img-mode' id="img-id-mode" width="40px"/>
                     </li>
                     
-                    <li>User</li>
-                    <li>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                    <li id='userName'>Guest</li>
+                    <li class="item-shopping-cart">
+                            <i class="fa-solid fa-cart-shopping" id="iconCart"></i>
                     </li>
-                    <li>Login</li>
+                    <li  ><a id="signInStatus" class='a-navBar linkSignIn' href="#" >Sign in</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    
-    <section class="search-products">
-        <div class="container-bar-search-products">
-            <input class="input-search" type="text" id="inputId">
-            <button class="button-search">
-                <img class="image-search" src="./Images/search.png" width="40" height="40" alt="img-search"/>
-            </button>
+
+    <section class="section-products">
+        <div class="container-products">
+
         </div>
 
     </section>
-    <section className="section-products">
-        <div class="container">
+    <section class="section-cart">
+        <div class="closeButton-container">
+            <ion-icon class='buttonClose' name="close"></ion-icon>
+        </div>
+        <div class="products-header">
+            <h5 class="title">PRODUCT</h5>
+            <h5 class="price">PRICE</h5>
+            <h5 class="quantity">QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
+        </div>
+        <div class="products">
 
         </div>
+
     </section>
+
+    <section class="section-signin">
+        <h2>Sign In</h2>
+        <form type="submit" class="content-form" >
+            
+            <label>Email</label>
+            <input id='emailSign' class="signin-input" type="email">
+            <span id="emailError" class="errorEmail"></span>
+            <label>Password</label>
+            <input id='passSign' class="signin-input" type="password">
+            <button class="buttonSignIn">Submit</button>
+        </form>
+        <div class="newCustomer">
+            New customer? <a class='linkCreateAccount' herf="#">Start here.</a>
+        </div>
+
+    </section>
+
+    <section class="section-createAccount">
+        <h2>Create account</h2>
+        <form id="registrationForm" type="submit" class="content-form" >
+            
+            <label for="username">Username</label>
+            <input id='username' class="signin-input" type="text">
+            <label for='email'>Email</label>
+            <input id='email' class="signin-input" type="email">
+            <span id="emailErrorForm" class="errorEmailForm"></span>
+            <label for='password'>Password</label>
+            <input id='password' class="signin-input" type="password">
+            <button class="buttonCreateAccount">Submit</button>
+        </form>
+
+    </section>
+
     <script src="https://kit.fontawesome.com/86bcf5dfc9.js" crossorigin="anonymous"></script>
-    <script src="./Data/products.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./Scripts/common.js"></script>
     <script src="./Scripts/navBar.js"></script>
     <script src="./Scripts/darkMode.js"></script>
-    <script src="./Scripts/common.js"></script>
+    <script src="./Scripts/shoppingCart.js"></script>
+    <script src="./Scripts/signIn.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
