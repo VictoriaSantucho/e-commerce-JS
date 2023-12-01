@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     const buttonMode = document.querySelector("#data-theme-toggle");
     const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");

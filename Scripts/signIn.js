@@ -52,8 +52,6 @@ function validateUser(email) {
         sectionSignIn.style.display = 'none'
         isValidateUser = true
         signInStatus.textContent = 'Logout'
-        // emailSignValue.value = '';
-        // passSignValue.value = '';
     }
 
     return isValidateUser
@@ -112,10 +110,6 @@ buttonSingIn.onclick = (e) =>{
     let emailSignValue = emailSign.value
     let isValidateSign = validateSign()
     isValidateSign && validateUser(emailSignValue)
-    // if(isValidateSign) {
-    // }if(validateUser(emailSignValue)){
-    //     sectionProducts.style.display = 'flex'
-    // }
 }
 
 

@@ -1,7 +1,6 @@
 let iconCartHTM = document.querySelector("#iconCart");
 let listCartHTML = document.querySelector('.listCart');
-let sectionListCart = document.querySelector('.list-cart');
-let productContainer = document.querySelector(".products")
+let cartProductContainer = document.querySelector(".cart-products")
 let buttonClose = document.querySelector(".buttonClose")
 
 let toastMixin = Swal.mixin({
@@ -36,39 +35,41 @@ const addToShoppingCart = (product) => {
 
 const addCartToHTML = (currentShoppingCart) => {
 
-    let productContainer = document.querySelector(".products")
+   // let productContainer = document.querySelector(".products")
     let cartCost = totalCost(currentShoppingCart)
     
     if(currentShoppingCart.length > 0) {
-        productContainer.innerHTML = '';
+        cartProductContainer.innerHTML = '';
         currentShoppingCart.forEach(item => {
             const shortTitle = item.product.title.split(" ").splice(0,3).join(" ")
-            productContainer.innerHTML += `
-            <div class='product'>
+            cartProductContainer.innerHTML += `
+            <div class='cart-product'>
                 <ion-icon name="close-circle" class='close-icon cart-iconClose' id="cart-${item.product.id}"></ion-icon>
-                <figure class="container-cart-img">
+                <figure class="cart-container-img">
                 <img src='${item.product.image}'>
               </figure>
                 
                 <span>'${shortTitle}'</span>
             </div>
-            <div class='price'>$${item.product.price}</div>   
-            <div class='quantity'>
+            <div class='cart-price'>$${item.product.price}</div>   
+            <div class='cart-quantity'>
             ${item.quantity}
             </div>
-            <div class='total'>
+            <div class='cart-total'>
                 $${item.product.price * item.quantity}
             </div>
                 
             `
         })
     
-    productContainer.innerHTML += `
-        <div class='totalCost-container'>
-            <h4 class='totalCost-title'>Total</h4>
-            <h4 class='totalCost'>$${cartCost}</h4>
+    cartProductContainer.innerHTML += `
+        <div class='cart-container-totalCost'>
+            <h4 class='cart-totalCost-title'>Total</h4>
+            <h4 class='cart-totalCost'>$${cartCost}</h4>
         </div>    
     `
+    }else {
+        cartProductContainer.innerHTML = ''
     }
 }
 
@@ -115,7 +116,7 @@ document.body.onclick = (event) => {
     }
 
 
-productContainer.onclick = (event) => {
+cartProductContainer.onclick = (event) => {
     
     let productsCart= shoppingCart.map(item => item.product ) 
     
